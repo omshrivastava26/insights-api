@@ -1,11 +1,20 @@
 from fastapi import FastAPI, HTTPException, Query
 from typing import List, Optional
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Insights API",
     version="1.0.0",
     description="Simple public REST API for anomaly insights."
+)
+app.add_middleware(
+    CORSMiddleware,
+    # For quick testing, allow everything:
+    allow_origins=["*"],          # <-- or replace "*" with your Visual Builder URL
+    allow_credentials=True,
+    allow_methods=["*"], 
+    allow_headers=["*"],
 )
 
 # --- Data model (for docs + validation) ---
