@@ -51,18 +51,18 @@ INSIGHTS: List[Insight] = [
         priority="High",
     ),
     Insight(
-        description="Actual Product Revenue 76.06% lower  in Jun FY24",
+        description="Actual Product Revenue 76.06% higher  in Jun FY24",
         pov="Sales West Region-Sentinal Custom Notebook",
         insightType="Anomaly",
         id="19",
-        priority="High",
+        priority="Medium",
     ),
     Insight(
-        description="Predicted Staples Sales 16.20% lower than forecast",
+        description="Predicted Staples Sales 16.20% higher than forecast",
         pov="Sales NorthEast Region-Sentinal Standard Notebook",
         insightType="Prediction",
         id="2",
-        priority="High",
+        priority="Low",
     ),
 ]
 
